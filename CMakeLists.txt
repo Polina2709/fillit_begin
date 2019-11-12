@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.14)
+project(Fillit C)
+set(CMAKE_C_STANDARD 99)
+add_executable(fillit.h check.c main.c save_coords.c)
+find_library(FT ft libft)
+target_link_libraries(fillit.h LINK_PUBLIC ${FT})
